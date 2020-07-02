@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DetailsControler">
+   <center>
+      <GridPane prefHeight="210.0" prefWidth="443.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.99999237060547" minWidth="10.0" prefWidth="14.999989827473957" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.99999237060547" minWidth="10.0" prefWidth="91.6666768391927" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.66668192545575" minWidth="8.000007629394531" prefWidth="322.999979654948" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.66663869222003" minWidth="10.0" prefWidth="24.333353678385436" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Name :" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Directory :" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Size :" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Dimension :" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Main color :" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+            <Separator layoutX="100.0" layoutY="83.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Separator layoutX="10.0" layoutY="173.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Separator layoutX="10.0" layoutY="173.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS" />
+            <TextField fx:id="name" editable="false" prefHeight="25.0" prefWidth="251.0" promptText="Unknown Value" text="Unknown name" GridPane.columnIndex="2" />
+            <TextField fx:id="directory" editable="false" prefHeight="25.0" prefWidth="251.0" promptText="Unknown Value" text="Unknown directory" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="size" editable="false" prefHeight="25.0" prefWidth="251.0" promptText="Unknown Value" text="Unknown size" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="dimension" editable="false" prefHeight="25.0" prefWidth="251.0" promptText="Unknown Value" text="Unknown dimension" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="color" editable="false" prefHeight="25.0" prefWidth="251.0" promptText="Unknown Value" text="Unknown color" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

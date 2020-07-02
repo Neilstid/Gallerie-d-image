@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="ImageWindow" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#LoadDetails" text="View Details" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#ShowNext" text="Next">
+                     <graphic>
+                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressource/Arrow/ArrowToRight.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#ShowPrevious" text="Previous">
+                     <graphic>
+                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressource/Arrow/ArrowToLeft.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <SplitPane prefHeight="43.0" prefWidth="311.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="366.0">
+               <children>
+                  <Slider fx:id="zoomLvl" layoutX="14.0" layoutY="14.0" prefHeight="14.0" prefWidth="237.0" AnchorPane.bottomAnchor="13.333333333333336" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="59.99999999999997" AnchorPane.topAnchor="14.0" />
+                  <Label fx:id="value" layoutX="263.0" layoutY="12.0" text="Zoom" AnchorPane.bottomAnchor="12.000000000000004" AnchorPane.rightAnchor="16.999999999999982" AnchorPane.topAnchor="12.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <BorderPane fx:id="PaneImage" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <ImageView fx:id="Cadre" fitHeight="460.0" fitWidth="654.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
